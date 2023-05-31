@@ -13,17 +13,13 @@ public class Student {
     private Email email;
     private List<Telephone> telephones = new ArrayList<>();
 
-    public Student(){
-
-    }
-
-   public Student(String name, CPF cpf, Email email){
+   protected Student(String name, CPF cpf, Email email){
         this.name = name;
         this.cpf = cpf;
         this.email = email;
     }
 
-    public void toAddTelefones(String ddd, String number){
+    public void toAddTelephones(String ddd, String number){
         this.telephones.add(new Telephone(ddd, number));
     }
 
@@ -39,22 +35,21 @@ public class Student {
         return email;
     }
 
-    public void listTelefones(){
+    public void listTelephones(){
         for(Telephone telephone : this.telephones){
             System.out.println(telephone.toString());
         }
     }
 
-    public List<Telephone> getTelefones(){
+    public List<Telephone> getTelephones(){
         return this.telephones;
     }
 
     @Override
     public String toString() {
-        return "Aluno{" +
-                "name='" + name + '\'' +
-                ", cpf=" + cpf.getCpf() +
-                ", email=" + email.getEmail() +
-                '}';
+        return "Student: " +
+                "name = " + name+
+                ", cpf = " + cpf.getCpf() +
+                ", email = " + email.getEmail();
     }
 }

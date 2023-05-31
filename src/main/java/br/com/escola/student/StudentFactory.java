@@ -10,7 +10,7 @@ public class StudentFactory {
         return this;
     }
     public StudentFactory withTelephone(String ddd, String number){
-        this.student.toAddTelefones(ddd, number);
+        this.student.toAddTelephones(ddd, number);
         return this;
     }
 
